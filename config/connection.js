@@ -1,3 +1,8 @@
+// Import the Sequelize constructor from the library
+const Sequelize = require('sequelize');
+
+require('dotenv').config();
+
 let sequelize;
 
 if (process.env.JAWSDB_URL) {
