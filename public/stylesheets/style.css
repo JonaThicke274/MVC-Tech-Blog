@@ -87,6 +87,11 @@ header h1 {
     font-size: 1em;
 }
 
+header img {
+    max-height: 1em;
+    width: auto;
+}
+
 main {
     flex: 1;
     padding: 2% 4%;
