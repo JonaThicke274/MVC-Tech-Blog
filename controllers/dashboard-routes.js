@@ -3,7 +3,7 @@ const withAuth = require(`../utils/auth.js`);
 const { Post, User, Comment } = require('../models');
 
 // Get all your posts for your dashboard
-router.get(`/`, /*withAuth,*/ (req, res) => {
+router.get(`/`, withAuth, (req, res) => {
     Post.findAll({
         // where: { user_id: req.session.user_id },
         attributes: [`id`, `title`, `created_at`, `post_content`],
@@ -33,7 +33,7 @@ router.get(`/`, /*withAuth,*/ (req, res) => {
     });
 });
 
-router.get(`/edit/:id`, /*withAuth,*/ (req, res) => {
+router.get(`/edit/:id`, withAuth, (req, res) => {
     Post.findOne({
         where: { id: req.params.id },
         attributes: [`id`, `title`, `created_at`, `post_content`],
