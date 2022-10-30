@@ -1,0 +1,10 @@
+<article class="post">
+    <div class="title">
+        <a href="/post/{{id}}" target="_blank">{{title}}</a>
+    </div>
+    <div class="meta">
+        By <a href="github.com/{{user.github}}">{{user.username}}</a> on {{format_date created_at}}
+        |
+        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    </div>
+</article>
