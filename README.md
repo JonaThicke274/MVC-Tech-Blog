@@ -24,7 +24,7 @@ A Tech Blog application that enables a user to publish articles, blog posts, and
 
 ## Demonstration:
 
-View a [demonstration video]() of how to use the application!
+View a [demonstration video](https://youtu.be/lcndX-XDRbQ) of how to use the application!
 
 ![image](https://user-images.githubusercontent.com/109185830/198893530-b57210b7-b143-4472-a368-0e560d9bf4d2.png)
 ![image](https://user-images.githubusercontent.com/109185830/198893542-47148821-f4e9-4b4e-bc1a-0c66090109fa.png)
