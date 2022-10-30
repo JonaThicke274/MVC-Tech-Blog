@@ -44,4 +44,37 @@ router.get(`/login`, (req, res) => {
     res.render(`login`);
 });
 
+// Single-post page
+router.get(`/post/:id`, (req, res) => {
+    Post.findOne({
+        attributes: [`id`, `title`, `created_at`, `post_content`],
+        include: [
+            {
+                model: Comment,
+                attributes: [`id`, `comment_text`, `user_id`, `created_at`]
+            },
+            {
+                model: User,
+                attributes: [`username`, `github`]
+            }
+        ]
+    })
+    .then(dbPostData => {
+        if (!dbPostData) {
+            res.status(404).json({ message: `No post with this id exists`})
+        }
+
+        const post = dbPostData.get({ plain: true });
+
+        res.render(`single-post`,  {
+            post,
+            loggedIn: req.session.loggedIn
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 module.exports = router;
