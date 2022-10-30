@@ -47,6 +47,7 @@ router.get(`/login`, (req, res) => {
 // Single-post page
 router.get(`/post/:id`, (req, res) => {
     Post.findOne({
+        where: { id: req.params.id },
         attributes: [`id`, `title`, `created_at`, `post_content`],
         include: [
             {
