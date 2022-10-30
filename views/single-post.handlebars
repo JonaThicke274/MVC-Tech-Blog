@@ -1,6 +1,6 @@
 {{> post-info post }}
 
-{{!-- {{#if loggedIn}} --}}
+{{#if loggedIn}}
 <form class="comment-form">
     <div>
         <textarea name="comment-body"></textarea>
@@ -8,14 +8,12 @@
 
     <div>
         <button type="submit">Add Comment</button>
-        <button type="button" class="upvote-btn">Upvote</button>
     </div>
 </form>
-{{!-- {{/if}} --}}
+{{/if}}
 
 {{> comments post.comments}}
 
-{{!-- {{#if loggedIn}}
+{{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
-{{/if}} --}}
+{{/if}}
