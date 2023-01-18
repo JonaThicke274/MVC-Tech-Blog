@@ -34,7 +34,7 @@ View a [demonstration video](https://youtu.be/lcndX-XDRbQ) of how to use the app
 
 
 ## Link to Deployed Application
-https://tech-blog-mod-14-challenge.herokuapp.com/
+https://jonathicke-tech-blog.herokuapp.com/
 
 ## Contributions/Credits
 Made by Jonathan Lipata Arevalo
